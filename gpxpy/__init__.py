@@ -15,6 +15,9 @@
 from typing import IO, Union, Optional, AnyStr
 
 from . import gpx as mod_gpx
+from . import parser as mod_parser
+
+
 
 __version__ = '1.4.2'
 
@@ -31,8 +34,6 @@ def parse(xml_or_file: Union[AnyStr, IO[str]], version: Optional[str] = None) ->
     version may be '1.0', '1.1' or None (then it will be read from the gpx
     xml node if possible, if not then version 1.0 will be used).
     """
-
-    from . import parser as mod_parser
 
     parser = mod_parser.GPXParser(xml_or_file)
 

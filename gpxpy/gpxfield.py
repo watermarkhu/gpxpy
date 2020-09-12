@@ -190,9 +190,9 @@ class GPXField(AbstractGPXField):
             else:
                 result = None
         if result is None:
-            if self.mandatory:
-                from . import gpx as mod_gpx
-                raise mod_gpx.GPXException(f'{self.name} is mandatory in {self.tag} (got {result})')
+            # if self.mandatory:
+            #     from . import gpx as mod_gpx
+            #     raise mod_gpx.GPXException(f'{self.name} is mandatory in {self.tag} (got {result})')
             return None
 
         if self.type_converter:
